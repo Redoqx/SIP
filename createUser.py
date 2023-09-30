@@ -1,7 +1,9 @@
 from API.dbHandler import db
 from encodePassword import encodePassword
+from landingPage import Singleton
 
-def createUser(data):
+def createUser():
+    data = Singleton()
     sql = db(
         data.HOST,
         data.USER,
@@ -16,7 +18,8 @@ def createUser(data):
         command = "INSERT INTO peminjam (id_peminjam, nama, password) VALUES (%s, %s, %s)"
         sql.execute(command=command, params=(id, nama_lengkap, encodePassword(password=password)))
 
-def createAdmin(data):
+def createAdmin():
+    data = Singleton()
     sql = db(
         data.HOST,
         data.USER,

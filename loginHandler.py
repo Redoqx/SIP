@@ -1,7 +1,10 @@
 from API.dbHandler import db
+from Singleton import Singleton
 from encodePassword import encodePassword
 
-def login(data):
+def login():
+    data = Singleton()
+    print(data.DB)
     sql = db(
         data.HOST,
         data.USER,
