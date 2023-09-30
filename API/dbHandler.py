@@ -20,7 +20,10 @@ class db():
         self._conn.close()
 
     def execute(self, command:str, params:None, multi: bool=False):
+        self.cursor = self._conn.cursor()
         self.cursor.execute(command,params=params,multi=multi)
+        self._conn.commit()
+        self.cursor.close()
     
     def checkTable(self):
         # for checking connection to database
