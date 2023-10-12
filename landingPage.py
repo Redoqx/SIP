@@ -7,7 +7,7 @@ from loginHandler import login
 # from createUser import createUser
 # from createUser import createAdmin
 
-    
+
 data = Singleton()
 data.set_value()
 
@@ -15,7 +15,6 @@ data.set_value()
 # createUser(data=data)
 # createAdmin(data=data)
 login()
-# sql = db(HOST,USER,PASS,DB)
 
 # user = False
 
