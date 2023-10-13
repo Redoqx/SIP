@@ -2,8 +2,8 @@ import os
 from dotenv import load_dotenv
 
 # from API.dbHandler import db
-from Singleton import Singleton
-from loginHandler import login
+from Singleton.Singleton import Singleton
+from API.loginHandler import login
 # from createUser import createUser
 # from createUser import createAdmin
 

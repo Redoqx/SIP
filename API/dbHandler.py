@@ -1,13 +1,15 @@
 import mysql.connector
+from ..Singleton.Singleton import Singleton
 
 class db():
-    def __init__(self, HOST, USER, PASS, DB):
+    def __init__(self):
         # Create a connection to the MySQL database
+        data = Singleton()
         self._conn = mysql.connector.connect(
-            host = HOST,
-            user = USER,
-            password = PASS,
-            database = DB
+            host = data.HOST,
+            user = data.USER,
+            password = data.PASS,
+            database = data.DB
         )
         # self.cursor = self._conn.cursor()
         self.logintry = 0
